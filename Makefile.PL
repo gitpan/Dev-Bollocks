@@ -5,7 +5,8 @@ WriteMakefile(
     'NAME'		=> 'Dev-Bollocks',
     'VERSION_FROM'	=> 'lib/Dev/Bollocks.pm', # finds $VERSION
     'PREREQ_PM'		=> { 
-			Math::String => 1.16
+			Math::String => 1.17,
+			Math::BigInt => 1.51,
 			   },
     'LIBS'		=> [''], # e.g., '-lm'
     'DEFINE'		=> '', # e.g., '-DHAVE_SOMETHING'

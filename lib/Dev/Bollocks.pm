@@ -7,7 +7,7 @@ use Math::String;
 @ISA = qw(Exporter Math::String);
 
 use vars qw($VERSION $accuracy $precision $fallback $rnd_mode);
-$VERSION = 0.04;
+$VERSION = 0.05;
 require  5.005;
 use strict;
 
@@ -31,7 +31,7 @@ my $bollocks;
 
 BEGIN
   {
-  $CALC = Math::BigInt::_core_lib();
+  $CALC = Math::BigInt->config()->{lib};
 
   # if we did this for every new() instead of in BEGIN, we would waste even
   # more resources. But we can't wait for management all day...
@@ -200,6 +200,7 @@ BEGIN
 	edge-of-your-seat
 	end-to-end
 	enterprise
+	enterprise-class
 	eligible
 	exceptional
 	extensible
@@ -281,14 +282,16 @@ BEGIN
 	customers
 	data
 	deliverables
+	developments
 	e-business
 	e-commerce
-	development
 	e-markets
 	e-services
 	e-tailers
+	environments
 	experiences
 	eyeballs
+	features
 	functionalities
 	infomediaries
 	information
@@ -618,6 +621,13 @@ From L<http://www.tomshardware.com/cpu/01q4/011105/index.html>:
 I<"This time, AMD attempts to entrench its position in the
 performance-oriented high-end segment."> - You just can't make that stuff
 up.
+
+=item *
+
+L<http://www.utsglobal.com/products.html>:
+
+...provide enterprise-class UNIX operating environments...
+...matched the unique scaleable, mission-critical features...
 
 =item *
 

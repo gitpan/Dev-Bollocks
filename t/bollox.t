@@ -82,7 +82,7 @@ print "# For '\$z = $y & $x'\n" if (!ok "$z" , 'adaptively appliances');
 $x = Dev::Bollocks->new('advantageously customers');
 $x->badd('advantageously infomediaries');
 
-ok ($x->as_number(),282);
+ok ($x->as_number(),292);
 $x->badd(1);			# can't add numbers 
 				# ('1' is not a valid Math::String here!)
 ok ($x->as_number(),'NaN');
@@ -141,7 +141,7 @@ ok (ref($x->as_number()),'Math::BigInt');
 # numify
 
 $x = Dev::Bollocks->new('adaptively empower systems'); 
-ok (ref($x->numify()),''); ok ($x->numify(),4197);
+ok (ref($x->numify()),''); ok ($x->numify(),4337);
 
 ##############################################################################
 # rand

@@ -14,5 +14,7 @@ Dev::Bollocks:
 2001-11-25 0.04: added lot's of words like entrench, high-end, appliances,
 		 percormance-oriented, market-growth, guinine etc
 		 fixed: pod and links
+2002-02-20 0.05: fixed: _core_lib() => config()->{lib}
+		 added: a few phrases and some more real-life examples in doc
 		 
 
