@@ -1,0 +1,13 @@
+CHANGES
+BUGS
+INSTALL
+README
+LICENSE
+MANIFEST
+CREDITS
+TODO
+Makefile.PL
+lib/Dev/Bollocks.pm
+t/bollox.t
+examples/bollocks.pl
+examples/sig.pl

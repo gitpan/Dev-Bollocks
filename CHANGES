@@ -1,0 +1,13 @@
+
+Complete version history
+========================
+
+############################################################################## 
+Dev::Bollocks:
+
+2001-09-14 0.01: first version
+2001-10-24 0.02: changed to use Math::String::Charset::Grouped
+		 added some more words and removed double "portals"
+		 added examples/bollocks.pl
+2001-11-05 0.03: added adverbs (minlen is 3)
+		 biannually transition mission-critical relationships
