@@ -67,9 +67,9 @@ $x = Dev::Bollocks->new ('adaptively CEOs');
 $y = Dev::Bollocks->new ('adaptively IPOs'); $z = $y | $x;	# 1 | 2 => 3
 print "# For '\$z = $y | $x'\n" if (!ok "$z" , 'adaptively ROI');
 
-$x = Dev::Bollocks->new("adaptively applications");
-$y = Dev::Bollocks->new("adaptively bandwidth"); $z = $y & $x;	# 5 & 7 => 5 
-print "# For '\$z = $y & $x'\n" if (!ok "$z" , 'adaptively applications');
+$x = Dev::Bollocks->new("adaptively appliances");
+$y = Dev::Bollocks->new("adaptively architectures"); $z = $y & $x; # 5 & 7 => 5 
+print "# For '\$z = $y & $x'\n" if (!ok "$z" , 'adaptively appliances');
 
 #$x = Dev::Bollocks->new("adaptively channels");
 #$y = Dev::Bollocks->new("adaptively customers"); $z = $y ^ $x;	# 8 ^ 13 => 5
@@ -80,9 +80,9 @@ print "# For '\$z = $y & $x'\n" if (!ok "$z" , 'adaptively applications');
 # check objectify of additional params
 
 $x = Dev::Bollocks->new('advantageously customers');
-$x->badd('advantageously infomediaries');		# 127 + 141
+$x->badd('advantageously infomediaries');
 
-ok ($x->as_number(),127+141);
+ok ($x->as_number(),282);
 $x->badd(1);			# can't add numbers 
 				# ('1' is not a valid Math::String here!)
 ok ($x->as_number(),'NaN');
@@ -128,8 +128,8 @@ print "# For '$try'\n" if (!ok "$rc" , 3 );
 #$rc = eval $try;
 #print "# For '$try'\n" if (!ok "$rc" , 4 );
 
-$x = Dev::Bollocks::from_number("541827");
-print "try: $x ",$x->as_number(),"\n";
+#$x = Dev::Bollocks::from_number("541827");
+# print "try: $x ",$x->as_number(),"\n";
 
 ##############################################################################
 # as_number
@@ -141,12 +141,12 @@ ok (ref($x->as_number()),'Math::BigInt');
 # numify
 
 $x = Dev::Bollocks->new('adaptively empower systems'); 
-ok (ref($x->numify()),''); ok ($x->numify(),3816);
+ok (ref($x->numify()),''); ok ($x->numify(),4197);
 
 ##############################################################################
 # rand
 
-$x = Dev::Bollocks->rand(); my $spaces = ($x =~ tr/ / /); ok ($spaces,3);
+$x = Dev::Bollocks->rand(); my $spaces = ($x =~ tr/ / /); ok ($spaces,4);
 $x = Dev::Bollocks->rand(3); $spaces = ($x =~ tr/ / /); ok ($spaces,2);
 $x = Dev::Bollocks->rand(4); $spaces = ($x =~ tr/ / /); ok ($spaces,3);
 $x = Dev::Bollocks->rand(5); $spaces = ($x =~ tr/ / /); ok ($spaces,4);

@@ -7,7 +7,7 @@ use Math::String;
 @ISA = qw(Exporter Math::String);
 
 use vars qw($VERSION $accuracy $precision $fallback $rnd_mode);
-$VERSION = 0.03;
+$VERSION = 0.04;
 require  5.005;
 use strict;
 
@@ -46,15 +46,18 @@ BEGIN
 	bully
 	cluster
 	create
+	coordinate
+	consolidate
 	compete
+	conquer
 	customize
 	cultivate
-	coordinate
 	deliver
 	deploy
 	develop
 	disintermediate
 	disseminate
+	differentiate
 	drive
 	e-enable
 	embrace
@@ -62,8 +65,10 @@ BEGIN
 	enable
 	engage
 	engineer
-	enhance 
+	enhance
+	entrench 
 	envisioneer
+	establish
 	evolve
 	expedite
 	exploit
@@ -81,6 +86,7 @@ BEGIN
 	incubate
 	industrialize
 	innovate
+	introduce
 	integrate
 	initiate
 	iterate
@@ -96,6 +102,7 @@ BEGIN
 	morph
 	optimize
 	orchestrate
+	participate
 	pursue
 	promote
 	reintermediate
@@ -119,7 +126,6 @@ BEGIN
 	visualize 
      /];
     my $adverbs = [ qw(
-	assertively
 	adaptively
 	authoritatively
 	administratively
@@ -127,6 +133,7 @@ BEGIN
 	ambassadorially
 	apprehensively
 	appropriately
+	assertively
 	augmentatively
 	autoschediastically
 	biannually
@@ -168,6 +175,7 @@ BEGIN
 	24/365
 	24/7
 	advanced
+	attention-grabbing
 	B2B
 	B2C
 	back-end
@@ -186,6 +194,8 @@ BEGIN
 	dot-com
 	dynamic
 	efficient
+	eye-catching
+	eigth-generation
 	error-free
 	edge-of-your-seat
 	end-to-end
@@ -194,19 +204,25 @@ BEGIN
 	exceptional
 	extensible
 	essential
+	fourth-generation
+	fifth-generation
 	fine-grained
 	frictionless
 	front-end
 	global
 	granular
+	guinine
 	holistic
 	high-yield
+	high-end
 	impactful
 	innovative
 	integrated
 	interactive
 	interdependent
 	intuitive
+	internet
+	industry-wide
 	killer
 	leading-edge
 	low-risk
@@ -214,10 +230,12 @@ BEGIN
 	market-driven
 	mission-critical
 	next-generation
+	network
 	one-to-one
 	open-source
 	out-of-the-box
 	plug-and-play
+	performance-oriented
 	principle-centered
 	proactive
 	professional
@@ -227,11 +245,14 @@ BEGIN
 	robust
 	scalable
 	seamless
+	six-generation
+	second-generation
 	sexy
 	slick
 	sticky
 	strategic
 	synergistic
+	third-generation
 	transparent
 	total
 	turn-key
@@ -250,6 +271,7 @@ BEGIN
     my $nouns = [ qw/
 	action-items
 	applications
+	appliances
 	architectures
 	bandwidth
 	channels
@@ -279,6 +301,7 @@ BEGIN
 	IPOs
 	clusters
 	designs
+	market-growth
 	materials
 	methodologies
 	metrics
@@ -296,7 +319,7 @@ BEGIN
 	relationships
 	ROI
 	synergies
-	web-readiness
+	segments
 	schemas
 	services
 	solutions
@@ -304,6 +327,7 @@ BEGIN
 	systems
 	technologies
 	users
+	web-readiness
         design-patterns / ];
 
   my @cs;
@@ -416,10 +440,11 @@ Dev::Bollocks - Arbitrary sized bollocks straight from middle management
       {
       print "$x\n"; $x++;		# next bollox
       }
-	
+
 =head1 REQUIRES
 
-perl5.005, Exporter, Math::BigInt, Math::String, Math::String::Charset
+perl5.005, Exporter, Math::BigInt, Math::String, Math::String::Charset,
+Math::String::Charset::Grouped
 
 =head1 EXPORTS
 
@@ -430,12 +455,14 @@ Exports nothing.
 This module implements /dev/bollocks, which generates management bullshit
 whenever you need it.
 
-Of course, to follow the spirit outlined in L<http:// >, this module doesn't
-simple do a C<head /dev/bollocks>, that would be too easy, too fast and
-non-portable. And bullshit is universilly portable.
+Of course, to follow the spirit outlined in
+L<http://www.fatsquirrel.org/veghead/software/bollocks/>
+this module doesn't simple do a C<head /dev/bollocks>, that would be too easy,
+too fast and non-portable. And bullshit is universilly portable.
 
-Thus the module makes a subclass of Math::Sting and changes the default
-charset to a charset that emulates the original /dev/bollocks charset.
+Thus the module makes a subclass of Math::String and changes the default
+charset to a charset that somewhat emulates and extends the original
+/dev/bollocks charset.
 
 As a side-effect you can calculate with bollocks strings, or even compare them
 to find out which is greater crap than the other:
@@ -545,7 +572,7 @@ Return a reference to the charset of the Dev::Bollocks object.
 
 It is rather slow. That is a feature, not a bug.
 
-=head2 BENCHMARKS
+=head2 Benchmarks
 
 Were not done on purpose. Nobody expects middle, or any other, for what it
 matters, management, to be fast or efficient, so we didn't waste our time in
@@ -562,15 +589,56 @@ the same terms as Perl itself.
 
 =head1 CREDITS
 
+=over 2
+
+=item *
+
 The original idea is from 
 L<http://www.fatsquirrel.org/veghead/software/bollocks/>.
 
+=item *
+
 I also found some words by searching the web for "Vision" statements
 (L<http://www.google.com> is your friend!). 
+
+=item *
+
 Webster's dictionary. Nowhere you can find gems like autoschediastically,
 daffydowndilly or histomorphologically.
-And last but not least there is
+
+=item *
+
+And then there is
 L<http://www.dilbert.com/comics/dilbert/career/html/mission_vocab.html>.
+
+=item *
+
+From L<http://www.tomshardware.com/cpu/01q4/011105/index.html>:
+
+I<"This time, AMD attempts to entrench its position in the
+performance-oriented high-end segment."> - You just can't make that stuff
+up.
+
+=item *
+
+The journal I<Displays Europe, issue #1> provided lot's of, uh, well, genuine
+[mental note to self: add genuine to the list of adjectives] material:
+
+=over 3
+
+=item An VESA ad
+
+I<"...to foster industry innovation and global market growth">
+
+=item Some headline
+
+I<"organic success stimulates industry-wide bandwagon">
+
+=back
+
+Yeah, whatever.
+
+=back
 
 =head1 AUTHOR
 
