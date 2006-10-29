@@ -1,14 +1,24 @@
-use ExtUtils::MakeMaker;
-# See lib/ExtUtils/MakeMaker.pm for details of how to influence
-# the contents of the Makefile that is written.
-WriteMakefile(
-    'NAME'		=> 'Dev-Bollocks',
-    'VERSION_FROM'	=> 'lib/Dev/Bollocks.pm', # finds $VERSION
-    'PREREQ_PM'		=> { 
-			Math::String => 1.17,
-			Math::BigInt => 1.51,
-			   },
-    'LIBS'		=> [''], # e.g., '-lm'
-    'DEFINE'		=> '', # e.g., '-DHAVE_SOMETHING'
-    'INC'		=> '', # e.g., '-I/usr/include/other'
-);
+
+require 5.8.1;
+use strict;
+
+# Load the Module::Install bundled in ./inc/
+use inc::Module::Install;
+
+# The name of your distribution
+name		'Dev-Bollocks';
+
+# Get most of the details from the primary module
+all_from	'lib/Dev/Bollocks.pm';
+
+requires	'Math::String'	=> 1.27;
+requires	'Math::BigInt'	=> 1.77;
+
+build_requires	'Test::More'	=> 0.42;
+
+license		'perl';
+
+author		'Tels <nospam-abuse@bloodgate.com>';
+
+# Generate the Makefile
+WriteAll;

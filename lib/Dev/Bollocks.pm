@@ -2,13 +2,12 @@
 
 package Dev::Bollocks;
 
-use Exporter;
 use Math::String;
-@ISA = qw(Exporter Math::String);
+@ISA = qw(Math::String);
 
 use vars qw($VERSION $accuracy $precision $fallback $rnd_mode);
-$VERSION = 0.05;
-require  5.005;
+$VERSION = 0.06;
+require  5.008001;
 use strict;
 
 $accuracy = undef;
@@ -446,8 +445,8 @@ Dev::Bollocks - Arbitrary sized bollocks straight from middle management
 
 =head1 REQUIRES
 
-perl5.005, Exporter, Math::BigInt, Math::String, Math::String::Charset,
-Math::String::Charset::Grouped
+perl v5.8.1, L<Math::BigInt>, L<Math::String>, L<Math::String::Charset>,
+L<Math::String::Charset::Grouped>
 
 =head1 EXPORTS
 
@@ -573,7 +572,7 @@ Return a reference to the charset of the Dev::Bollocks object.
 
 =head1 PERFORMANCE
 
-It is rather slow. That is a feature, not a bug.
+It is rather slow. This is a feature, not a bug.
 
 =head2 Benchmarks
 
@@ -655,7 +654,7 @@ Yeah, whatever.
 If you use this module in one of your projects (haha!), then please email me.
 Or maybe better not. Oh, crap, mail me anyway.
 
-Tels http://bloodgate.com 2001.
+(c) Tels http://bloodgate.com 2001 - 2006.
 
 =cut
 
